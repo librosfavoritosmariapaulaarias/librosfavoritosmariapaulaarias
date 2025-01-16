@@ -1,0 +1,201 @@
+/* Estilos generales */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F5E7CD;
+    color: #002c45;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header */
+header {
+    background: #DE0E1E;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1010;
+    transition: top 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #9b0a14;
+    border-radius: 5px;
+}
+
+/* Sección de contenido */
+.section {
+    padding: 70px 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Lista de tarjetas */
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card de libro */
+.card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 80%; /* Asegura que las imágenes sean totalmente responsivas */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.card button {
+    background: #DE0E1E;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%; /* Botón ocupa todo el ancho */
+    text-align: left;
+}
+
+.card button:hover {
+    background: #9b0a14;
+}
+
+/* Footer */
+footer {
+    background: #002c45;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos Responsivos */
+
+/* Pantallas medianas (<= 768px) */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Dos tarjetas por fila */
+        max-width: calc(50% - 20px);
+    }
+
+    header {
+        padding: 5px 10px; /* Menos espacio en el header */
+        font-size: 0.9em; /* Fuente más pequeña en el header */
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px; /* Menos espacio entre los enlaces */
+    }
+
+    footer {
+        font-size: 0.75em; /* Fuente más pequeña en el footer */
+        padding: 10px; /* Menos padding en el footer */
+    }
+
+    footer img {
+        width: 200px; /* Imagen más pequeña */
+    }
+}
+
+/* Pantallas pequeñas (<= 480px) */
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Una tarjeta por fila */
+        max-width: 100%;
+    }
+
+    header {
+        font-size: 0.8em; /* Fuente más pequeña */
+        padding: 5px;
+    }
+
+    nav a {
+        font-size: 1em; /* Texto más pequeño */
+    }
+
+    footer {
+        font-size: 0.7em;
+    }
+
+    .section h2 {
+        font-size: 1.8em; /* Título más pequeño */
+    }
+}
