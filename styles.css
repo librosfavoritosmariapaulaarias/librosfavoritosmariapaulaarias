@@ -23,7 +23,7 @@ body {
 header {
     background: #DE0E1E;
     color: #fff;
-    padding: 10px 15px;
+    padding: 10px 10px;
     text-align: center;
     position: fixed;
     top: 0;
@@ -183,7 +183,7 @@ footer p {
     }
 
     header {
-        font-size: 0.8em; /* Fuente más pequeña */
+        font-size: 0.6em; /* Fuente más pequeña */
         padding: 5px;
     }
 
